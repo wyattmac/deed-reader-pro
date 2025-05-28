@@ -1,0 +1,53 @@
+============================================
+    DEED READER PRO - QUICK START GUIDE
+============================================
+
+🚀 TO START THE APPLICATION:
+   Just double-click: RUN_APP.bat
+   
+   This will:
+   ✓ Check all prerequisites
+   ✓ Install any missing dependencies
+   ✓ Start both servers automatically
+   ✓ Handle common issues
+
+============================================
+
+📋 OTHER UTILITIES:
+
+1. TROUBLESHOOT.bat
+   - Run this if you're having problems
+   - Shows what's wrong and how to fix it
+
+2. RESET_AND_CLEAN.bat
+   - Use when things are really broken
+   - Removes all dependencies for fresh start
+   - Run RUN_APP.bat after to reinstall
+
+3. Individual launchers:
+   - start-backend.bat (backend only)
+   - start-frontend.bat (frontend only)
+
+============================================
+
+⚡ COMMON FIXES:
+
+"localhost refused to connect"
+→ Run RUN_APP.bat (it auto-installs dependencies)
+
+"Port already in use"
+→ RUN_APP.bat will ask to kill existing process
+
+"Module not found" errors
+→ Run RESET_AND_CLEAN.bat, then RUN_APP.bat
+
+"API key error"
+→ Add your Anthropic API key to:
+  deed-reader-web\backend\.env
+
+============================================
+
+Need your Anthropic API key?
+→ Get it from: https://console.anthropic.com/
+
+============================================

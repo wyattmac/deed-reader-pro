@@ -1,0 +1,51 @@
+repos:
+  # Python hooks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^(.*node_modules/.*|.*venv/.*|.*build/.*|.*__pycache__/.*)$
+      - id: end-of-file-fixer
+        exclude: ^(.*node_modules/.*|.*venv/.*|.*build/.*|.*__pycache__/.*)$
+      - id: check-yaml
+        exclude: ^(.*node_modules/.*|.*venv/.*|.*build/.*)$
+      - id: check-added-large-files
+        args: ['--maxkb=1000']
+        exclude: ^(.*node_modules/.*|.*venv/.*|.*build/.*)$
+      - id: check-merge-conflict
+      - id: debug-statements
+        exclude: ^(.*node_modules/.*|.*venv/.*|.*build/.*|.*__pycache__/.*)$
+
+  # Python formatting
+  - repo: https://github.com/psf/black
+    rev: 24.3.0
+    hooks:
+      - id: black
+        files: ^deed-reader-web/backend/
+        language_version: python3
+
+  # Python import sorting
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        files: ^deed-reader-web/backend/
+        args: ["--profile", "black", "--line-length", "120"]
+
+  # Python linting
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+      - id: flake8
+        files: ^deed-reader-web/backend/
+        args: ["--config", "deed-reader-web/backend/.flake8"]
+
+  # Frontend linting
+  - repo: local
+    hooks:
+      - id: eslint
+        name: ESLint
+        entry: bash -c 'cd deed-reader-web/frontend && npm run lint'
+        language: system
+        files: ^deed-reader-web/frontend/src/.*\.(ts|tsx)$
+        pass_filenames: false
