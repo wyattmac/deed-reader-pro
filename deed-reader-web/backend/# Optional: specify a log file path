@@ -1,0 +1,51 @@
+2025-05-28 23:24:25,083 - __main__ - INFO - [app.py:135] - Upload directory: ./uploads
+2025-05-28 23:24:25,085 - __main__ - INFO - [app.py:139] - CORS enabled for origins: ['http://localhost:3000', 'http://127.0.0.1:3000']
+2025-05-28 23:24:25,094 - __main__ - INFO - [app.py:150] - All route blueprints registered
+2025-05-28 23:24:25,096 - services.claude_service - ERROR - [claude_service.py:46] - Failed to initialize Claude client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-05-28 23:24:25,097 - __main__ - WARNING - [app.py:159] - Claude service not available. AI features will be limited.
+2025-05-28 23:24:25,100 - __main__ - INFO - [app.py:327] - ==================================================
+2025-05-28 23:24:25,102 - __main__ - INFO - [app.py:328] - Starting Deed Reader Pro Backend
+2025-05-28 23:24:25,104 - __main__ - INFO - [app.py:329] - ==================================================
+2025-05-28 23:24:25,105 - __main__ - INFO - [app.py:330] - Version: 1.0.0
+2025-05-28 23:24:25,106 - __main__ - INFO - [app.py:331] - Environment: development
+2025-05-28 23:24:25,108 - __main__ - INFO - [app.py:332] - Debug mode: True
+2025-05-28 23:24:25,109 - __main__ - INFO - [app.py:333] - Upload folder: ./uploads
+2025-05-28 23:24:25,110 - __main__ - INFO - [app.py:334] - Claude AI enabled: False
+2025-05-28 23:24:25,112 - __main__ - INFO - [app.py:335] - Max file size: 50MB
+2025-05-28 23:24:25,113 - __main__ - INFO - [app.py:336] - CORS origins: ['http://localhost:3000', 'http://127.0.0.1:3000']
+2025-05-28 23:24:25,114 - __main__ - INFO - [app.py:337] - ==================================================
+2025-05-28 23:24:43,743 - __main__ - INFO - [app.py:135] - Upload directory: ./uploads
+2025-05-28 23:24:43,745 - __main__ - INFO - [app.py:139] - CORS enabled for origins: ['http://localhost:3000', 'http://127.0.0.1:3000']
+2025-05-28 23:24:43,759 - __main__ - INFO - [app.py:150] - All route blueprints registered
+2025-05-28 23:24:43,761 - services.claude_service - ERROR - [claude_service.py:46] - Failed to initialize Claude client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-05-28 23:24:43,763 - __main__ - WARNING - [app.py:159] - Claude service not available. AI features will be limited.
+2025-05-28 23:24:43,767 - __main__ - INFO - [app.py:327] - ==================================================
+2025-05-28 23:24:43,769 - __main__ - INFO - [app.py:328] - Starting Deed Reader Pro Backend
+2025-05-28 23:24:43,771 - __main__ - INFO - [app.py:329] - ==================================================
+2025-05-28 23:24:43,773 - __main__ - INFO - [app.py:330] - Version: 1.0.0
+2025-05-28 23:24:43,774 - __main__ - INFO - [app.py:331] - Environment: development
+2025-05-28 23:24:43,776 - __main__ - INFO - [app.py:332] - Debug mode: True
+2025-05-28 23:24:43,778 - __main__ - INFO - [app.py:333] - Upload folder: ./uploads
+2025-05-28 23:24:43,780 - __main__ - INFO - [app.py:334] - Claude AI enabled: False
+2025-05-28 23:24:43,782 - __main__ - INFO - [app.py:335] - Max file size: 50MB
+2025-05-28 23:24:43,784 - __main__ - INFO - [app.py:336] - CORS origins: ['http://localhost:3000', 'http://127.0.0.1:3000']
+2025-05-28 23:24:43,787 - __main__ - INFO - [app.py:337] - ==================================================
+2025-05-28 23:24:43,967 - werkzeug - WARNING - [_internal.py:96] -  * Debugger is active!
+2025-05-28 23:26:30,569 - __main__ - INFO - [app.py:135] - Upload directory: ./uploads
+2025-05-28 23:26:30,572 - __main__ - INFO - [app.py:139] - CORS enabled for origins: ['http://localhost:3000', 'http://127.0.0.1:3000']
+2025-05-28 23:26:30,593 - __main__ - INFO - [app.py:150] - All route blueprints registered
+2025-05-28 23:26:30,596 - services.claude_service - ERROR - [claude_service.py:46] - Failed to initialize Claude client: Client.__init__() got an unexpected keyword argument 'proxies'
+2025-05-28 23:26:30,598 - __main__ - WARNING - [app.py:159] - Claude service not available. AI features will be limited.
+2025-05-28 23:26:30,602 - __main__ - INFO - [app.py:327] - ==================================================
+2025-05-28 23:26:30,604 - __main__ - INFO - [app.py:328] - Starting Deed Reader Pro Backend
+2025-05-28 23:26:30,607 - __main__ - INFO - [app.py:329] - ==================================================
+2025-05-28 23:26:30,609 - __main__ - INFO - [app.py:330] - Version: 1.0.0
+2025-05-28 23:26:30,611 - __main__ - INFO - [app.py:331] - Environment: development
+2025-05-28 23:26:30,614 - __main__ - INFO - [app.py:332] - Debug mode: True
+2025-05-28 23:26:30,616 - __main__ - INFO - [app.py:333] - Upload folder: ./uploads
+2025-05-28 23:26:30,618 - __main__ - INFO - [app.py:334] - Claude AI enabled: False
+2025-05-28 23:26:30,620 - __main__ - INFO - [app.py:335] - Max file size: 50MB
+2025-05-28 23:26:30,622 - __main__ - INFO - [app.py:336] - CORS origins: ['http://localhost:3000', 'http://127.0.0.1:3000']
+2025-05-28 23:26:30,624 - __main__ - INFO - [app.py:337] - ==================================================
+2025-05-28 23:29:16,755 - app - INFO - [app.py:113] - Request: GET http://localhost:5000/api/health - IP: 127.0.0.1
+2025-05-28 23:29:16,777 - app - INFO - [app.py:118] - Response: 200 - 0.022s - Size: 402 bytes

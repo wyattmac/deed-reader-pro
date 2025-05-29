@@ -1,0 +1,106 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+## Development Workflow
+
+### Starting the Application
+**ALWAYS use the automation scripts:**
+```bash
+scripts\RUN_APP.bat  # Starts both frontend and backend
+```
+- Backend: http://localhost:5000
+- Frontend: http://localhost:3000
+
+### Making Changes
+- **Frontend changes**: Auto-reload (no restart needed)
+- **Backend changes**: Restart with `scripts\RUN_APP.bat`
+- **Config changes** (.env, requirements.txt): Restart required
+
+### Git Workflow
+```bash
+scripts\GIT_COMMIT.bat  # Automated commit with linting
+```
+
+### Troubleshooting
+```bash
+scripts\TROUBLESHOOT.bat  # Comprehensive diagnostics
+```
+
+## Important Configuration
+
+### API Key Location
+File: `deed-reader-web/backend/.env`
+Required: `ANTHROPIC_API_KEY=sk-ant-api03-your-key-here`
+
+### Health Check
+Always verify Claude AI is working:
+```bash
+curl http://localhost:5000/api/health
+# Should show: "claude": "healthy"
+```
+
+## Key API Endpoints
+- `POST /api/documents/upload` - Upload deed files
+- `POST /api/analysis/analyze` - AI analysis with Claude
+- `POST /api/chat/ask` - Interactive Q&A about documents
+- `POST /api/plotting/plot` - Generate property plots
+
+## Code Guidelines
+
+### When Helping with Frontend (React/TypeScript)
+- Use TypeScript strict mode
+- Follow Tailwind CSS utility classes
+- Use React Query for API calls
+- Components are in `/src/components/`
+### When Helping with Backend (Python/Flask)
+- Follow Flask blueprint structure
+- Claude service is in `/services/claude_service.py`
+- Use proper error handling and logging
+- Virtual environment is in `deed-reader-web/backend/venv/`
+
+### File Upload Support
+- Supported formats: PDF, PNG, JPG, TIFF, TXT
+- Max size: 50MB
+- OCR via Claude Vision API for images
+
+## Critical Rules
+
+1. **Never run `python app.py` directly** - Use `scripts\RUN_APP.bat`
+2. **Environment changes require restart** - .env, requirements.txt, etc.
+3. **Use automation scripts** - They handle virtual environments and dependencies
+4. **Check health endpoint** after any configuration changes
+5. **Frontend runs on 3000, backend on 5000** - Don't change these ports
+
+## Common Tasks
+
+### Adding New Dependencies
+**Python**: Add to `requirements.txt`, then `scripts\TEST_APP.bat`
+**Node**: `cd deed-reader-web/frontend && npm install package-name`
+
+### Testing Changes
+- Frontend: Check browser at localhost:3000
+- Backend: Test with `curl http://localhost:5000/api/health`
+- AI features: Upload a document and verify Claude analysis
+
+### Debugging
+1. Check if both servers are running
+2. Verify Claude service status in health endpoint
+3. Use `scripts\TROUBLESHOOT.bat` for comprehensive diagnostics
+4. Check browser console for frontend errors
+
+## Development Environment
+- Python 3.12+ with virtual environment
+- Node.js for React development
+- Anthropic Claude API key required for AI features
+- Windows batch scripts for automation
+
+## Domain Context
+Building Deed Reader Pro - an AI-powered deed parsing app for surveyors that:
+- Extracts bearing/distance data from property deeds
+- Creates visual plots of property boundaries
+- Uses Claude AI for intelligent document analysis
+- Handles various deed formats (PDF, images, text)
+
+Remember: This project is designed for minimal manual setup. Trust the automation scripts and use them consistently for the best development experience.
