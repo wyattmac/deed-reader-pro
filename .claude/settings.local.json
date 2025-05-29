@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(rm:*)",
+      "WebFetch(domain:www.deedreaderpro.com)",
+      "Bash(npm install:*)",
+      "Bash(chmod:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(cp:*)",
+      "Bash(find:*)",
+      "Bash(git config:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(node:*)",
+      "Bash(python3:*)",
+      "Bash(./venv/bin/python -m pip install --upgrade pip)",
+      "Bash(./venv/bin/pip install:*)",
+      "Bash(true)",
+      "Bash(python test:*)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(./scripts/RUN_APP.bat)",
+      "Bash(cd:*)",
+      "Bash(python:*)",
+      "Bash(./scripts/TEST_APP.bat)",
+      "Bash(. venv/bin/activate)",
+      "Bash(curl:*)",
+      "Bash(git remote set-url:*)"
+    ],
+    "deny": []
+  },
+  "enableAllProjectMcpServers": false
+}
