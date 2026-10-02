@@ -1,0 +1,15 @@
+---
+description: Survey-math and contract rules for Deed Reader Pro
+alwaysApply: true
+---
+
+Read AGENTS.md, docs/CONTRACTS.md, and docs/RECONCILE.md before writing code. Also follow .cursor/rules/deedreadrule.mdc.
+
+- The app is deed-reader-web/frontend (npm, React, CRA) and deed-reader-web/backend (Flask on port 5000, FastAPI migration in progress). Do not add pnpm, Next.js, Prisma, or packages/.
+- New survey math lives only in deed-reader-web/backend/core and is deterministic. Do not use an AI number as geometry. The existing bearing_decimal path in services/plotting_service.py stays until docs/REQUESTS.md says to replace it.
+- Do not edit docs/CONTRACTS.md unless the task is 00-foundation or 06-contracts-update. Do not rename existing fields. Put change requests in docs/REQUESTS.md.
+- Work only inside the paths the assigned task owns.
+- Never overwrite user edits; create a new DeedVersion once editing exists.
+- Do not import anthropic or openai outside services/claude_service.py. Keys come from the environment.
+- New persisted queries take a firm id once accounts exist. Existing routes are not firm-scoped.
+- Run python lint.py, npm run lint, and npx tsc --noEmit before opening a pull request. New behavior needs a pytest or Jest assertion.
