@@ -1,0 +1,8 @@
+{
+  "setup-worktree": [
+    "python3 -m venv deed-reader-web/backend/venv || true",
+    "deed-reader-web/backend/venv/bin/pip install -r deed-reader-web/backend/requirements.txt || pip3 install -r deed-reader-web/backend/requirements.txt",
+    "npm install --prefix deed-reader-web/frontend",
+    "cp \"$ROOT_WORKTREE_PATH/deed-reader-web/backend/.env\" deed-reader-web/backend/.env || true"
+  ]
+}

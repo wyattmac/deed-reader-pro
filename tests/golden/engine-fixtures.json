@@ -1,0 +1,51 @@
+{
+  "note": "Synthetic fixtures with exact answers. Not executed. The runner belongs to task 00 and calls a deterministic solver in deed-reader-web/backend/core/. Do not score these with Claude. Add real deeds with hand-checked answers beside this file.",
+  "tolerance": { "distance": 0.01, "area": 0.5 },
+  "fixtures": [
+    {
+      "name": "square-100",
+      "calls": ["N 0-00-00 E 100.00 ft", "N 90-00-00 E 100.00 ft", "S 0-00-00 E 100.00 ft", "N 90-00-00 W 100.00 ft"],
+      "expect": { "closure": 0.0, "areaSqFt": 10000.0, "perimeter": 400.0 }
+    },
+    {
+      "name": "rectangle-200x300",
+      "calls": ["N 0-00-00 E 200.00 ft", "N 90-00-00 E 300.00 ft", "S 0-00-00 E 200.00 ft", "N 90-00-00 W 300.00 ft"],
+      "expect": { "closure": 0.0, "areaSqFt": 60000.0, "acres": 1.3774, "perimeter": 1000.0 }
+    },
+    {
+      "name": "right-triangle-3-4-5",
+      "calls": ["N 0-00-00 E 300.00 ft", "N 90-00-00 E 400.00 ft", "S 53-07-48.37 W 500.00 ft"],
+      "expect": { "closure": 0.0, "areaSqFt": 60000.0, "perimeter": 1200.0 }
+    },
+    {
+      "name": "blunder-wrong-quadrant",
+      "calls": ["N 0-00-00 E 100.00 ft", "N 90-00-00 E 100.00 ft", "N 0-00-00 E 100.00 ft", "N 90-00-00 W 100.00 ft"],
+      "expect": { "closure": 200.0, "topBlunder": { "callIndex": 2, "field": "direction", "to": "S 0-00-00 E", "resultingClosure": 0.0 } }
+    },
+    {
+      "name": "unit-mixed-chains-poles-links",
+      "convert": "10 chains 2 poles 5 links",
+      "expect": { "feet": 696.30 }
+    },
+    {
+      "name": "unit-texas-vara",
+      "convert": "100 varas (texas)",
+      "expect": { "feet": 277.7778 }
+    },
+    {
+      "name": "unit-california-vara",
+      "convert": "100 varas (california)",
+      "expect": { "feet": 275.0 }
+    },
+    {
+      "name": "curve-radius-delta",
+      "curve": { "radius": 100.0, "delta": 90.0 },
+      "expect": { "arcLength": 157.0796, "chordDistance": 141.4214 }
+    },
+    {
+      "name": "curve-check-bad-arc",
+      "curve": { "radius": 100.0, "delta": 90.0, "arcLength": 175.08 },
+      "expect": { "curveCheck": { "field": "arcLength", "withinTolerance": false } }
+    }
+  ]
+}
